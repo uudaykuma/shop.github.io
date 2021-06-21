@@ -25,6 +25,7 @@ function slideShow2() {
     setInterval("slideshow(1)", 3000); // in setInterval calling the above function
 }
 slideShow2()
+// image slide show ends here
 
 
 var cart = JSON.parse(localStorage.getItem('cart')) || [] // adding the product to cart
@@ -35,6 +36,7 @@ var fav = JSON.parse(localStorage.getItem('favourite')) || [] // adding the fav 
 async function category(c) {
     //here accessing  the value of the button which is provided on the HTML page
     var value = c.value;
+    console.log(value)
 
     var div = document.getElementById('display')
     div.innerText = null
