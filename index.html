@@ -20,29 +20,30 @@
         </div>
 
     </header>
-    <nav id="nav">
+    <!-- <nav id="nav">
         <div id="icat1"><button onclick="home()">HOME</button></div>
         <div id="icat2"><button onclick="">MEN'S CLOTHING</button></div>
         <div id="icat3"><button>WOMEN'S CLOTHING</button></div>
         <div id="icat4"><button>ELECTRONICS</button></div>
         <div id="icat5"><button>JEWELLERY</button></div>
-    </nav>
+    </nav> -->
     <!-- header and nav bar ends here -->
-
-    <!-- image slide show start from here -->
-    <div id="slide">
-        <img src="https://images.unsplash.com/photo-1543322748-33df6d3db806?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bWVucyUyMGZhc2hpb258ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="" id="images">
-    </div>
-    <!-- image slide show end  here -->
 
     <!-- category box start from here -->
     <div id="category">
-        <div id="forMen"><button onclick="category(men)" id="men" value="men's clothing">for men's</button></div>
-        <div id="forWomen"><button onclick="category(women)" id="women" value="women's clothing">for women's</button></div>
-        <div id="electronic"><button onclick="category(electronics)" id="electronics" value="electronics">for electronics</button></div>
-        <div id="jewellery"><button onclick="category(jewelery)" id="jewelery" value="jewelery">for jewellery</button></div>
+        <div id="forAll"><button onclick="getAllProduct()">All</button></div>
+        <div id="forMen"><button onclick="category(men)" id="men" value="men's clothing">Men's Section</button></div>
+        <div id="forWomen"><button onclick="category(women)" id="women" value="women's clothing">Women's Section</button></div>
+        <div id="electronic"><button onclick="category(electronics)" id="electronics" value="electronics">Electronics</button></div>
+        <div id="jewellery"><button onclick="category(jewelery)" id="jewelery" value="jewelery">Jewellery</button></div>
     </div>
     <!-- category box ends  here -->
+
+    <!-- image slide show start from here -->
+    <!-- <div id="slide">
+        <img src="https://tse3.mm.bing.net/th/id/OIG1.XDK.wyfkFvIX5HCPZ9LJ?pid=ImgGn" alt="" id="images">
+    </div> -->
+    <!-- image slide show end  here -->
 
     <!-- <div id="sort">
         <select name="sorting" id="sorting" onchange="sortproduct()">
@@ -52,10 +53,10 @@
         </select>
     </div> -->
 
-
-
     <!-- showing catergory of that particular product -->
     <div id="display"></div>
+
+    
     <!-- showing catergory of that particular product ends -->
 
     <!-- footer starts here -->

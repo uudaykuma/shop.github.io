@@ -1,4 +1,4 @@
-var cart_product = JSON.parse(localStorage.getItem('cart')) // getting data from the localstorage 
+var cart_product = JSON.parse(localStorage.getItem('cart')) || [] // getting data from the localstorage 
 
 var div = document.getElementById('display')
 
@@ -9,6 +9,8 @@ function compare(a, b) { // sorting the product from low to high through pricing
 
     return 0;
 }
+console.log(cart_product, 'cart_product')
+
 
 var sorted_cart = cart_product.sort(compare);
 console.log(sorted_cart)
@@ -41,6 +43,12 @@ var cart_div = document.getElementById('cartvalue')
 var h4 = document.createElement('h4')
 h4.textContent = `Total: $${total}/-`
 cart_div.append(h4)
+
+console.log(cart_product.length, 'cart_product.length');
+if (cart_product.length === 0) {
+    const divcartPromo = document.getElementById('totalcart')
+    divcartPromo.style.display = 'none'
+}
 
 
 

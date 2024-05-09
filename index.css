@@ -82,16 +82,19 @@ body {
 }
 
 #slide {
-    width: 70%;
-    height: 400px;
+    width: 50%;
+    /* height: 400px; */
     margin: auto;
     margin-top: 50px;
     box-shadow: -2px -2px 5px rgb(1, 65, 12), 2px 2px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #slide>img {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 }
 
 
@@ -106,14 +109,19 @@ body {
     margin: auto;
     margin-top: 50px;
     display: grid;
-    grid-template: 'div div div div';
+    grid-template: 'div div div div div';
     gap: 20px;
 }
 
 #category>div {
-    height: 260px;
+    border-radius: 50%;
+    width: 230px;
+    height: 230px;
     margin-top: 20px;
     box-shadow: -2px -2px 5px rgb(1, 65, 12), 2px 2px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #jewellery {
@@ -131,14 +139,28 @@ body {
 #forMen {
     background-image: url('./mens.jpg');
 }
+#forAll {
+    background: linear-gradient(45deg, #ff7300, #e6005c, #007bff, #00ff84, #ff7300);
+    background-size: 400% 400%;
+    animation: colorChange 10s infinite;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@keyframes colorChange {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
 
 #category>div>button {
-    width: 70%;
+    min-width: 70%;
     height: 40px;
+    padding: 10px;
     background-color: transparent;
     color: rgb(255, 255, 255);
-    margin-top: 200px;
-    margin-left: 15%;
     outline: none;
     border: none;
     letter-spacing: 1px;
@@ -154,40 +176,50 @@ body {
 /* Displaying product */
 
 #display {
-    width: 40%;
-    height: auto;
-    margin: auto;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    box-shadow: -2px -2px 5px rgb(1, 65, 12), 2px 2px 10px black;
+    /* box-shadow: -2px -2px 5px rgb(1, 65, 12), 2px 2px 10px black; */
 }
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* height: 450px; */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-#display>img {
-    width: 50%;
-    height: 250px;
-    margin-left: 25%;
-}
-
-hr {
-    margin-top: 50px;
-    box-shadow: -2px -2px 5px rgb(1, 65, 12), 2px 2px 10px black;
-}
+  .product-card img {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+  }
 
 p {
     text-align: center;
     letter-spacing: 1.5px;
     font-weight: 500;
     font-size: 20px;
+    padding: 20px;
 }
 
-h3 {
+.product-card h3 {
     text-align: center;
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    padding: 10px 30px;
     letter-spacing: 1px;
-    font-weight: 300;
+    font-weight: 700;
+    font-size: 16px;
 }
 
-#display>button {
+.product-card >button {
     width: 130px;
     height: 30px;
     box-shadow: -2px -2px 5px rgb(1, 65, 12), 2px 2px 10px black;
@@ -196,7 +228,8 @@ h3 {
     border-radius: 7px;
     background-color: black;
     color: white;
-    margin-left: 40%;
+    /* margin-left: 40%; */
+    margin: 10px 10px 50px 10px;
 }
 
 #sort {

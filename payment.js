@@ -67,5 +67,6 @@ function submitOtp() { // functionality for the otp
 }
 
 function gotohomepage() {
+    localStorage.removeItem('cart')
     location.assign('index.html')
 }
